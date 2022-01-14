@@ -1,0 +1,50 @@
+section.results {
+  text-align: center;
+}
+h1.cityName {
+  font-size: 50px;
+  font-weight: lighter;
+  padding-top: 100px;
+}
+h1.degrees {
+  font-size: 70px;
+  font-weight: normal;
+}
+h1.currentTemp {
+  font-size: 12px;
+  opacity: 0.75;
+}
+form.searchBar {
+  text-align: center;
+  padding-bottom: 20px;
+}
+input.search {
+  border-radius: 50% 20% / 10% 40%;
+  border-radius: 30px;
+  width: 300px;
+}
+
+div.card-body {
+  text-align: center;
+  margin-top: 20px;
+  padding: 0;
+  border: 1px solid rgba(12, 12, 12, 0.5);
+  border-style: solid;
+  border-radius: 40%;
+  height: 180px;
+  width: 150px;
+  transition: all 200ms ease;
+  box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+}
+
+div.card-body:hover,
+div.card-body:focus {
+  height: 200px;
+  width: 190px;
+  font-size: x-large;
+}
+.card-title,
+.card-subtitle,
+.card-text {
+  margin-top: 20px;
+}

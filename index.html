@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <title>🌪 Weather App</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- search results -->
+      <section class="results">
+        <div class="row">
+          <div class="col-12 cityName">
+            <h1 class="cityName" id="city-name">Current City</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12"><h1 class="degrees">0°</h1></div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <h1 class="currentTemp"><small>Current Temp</small></h1>
+            <div id="time">Time and Date</div>
+          </div>
+        </div>
+      </section>
+      <!-- end of search results -->
+      <!-- Form -->
+      <form class="searchBar">
+        <input
+          type="search"
+          class="search"
+          placeholder=" Search"
+          autocomplete="on"
+        />
+      </form>
+      <!-- end of form -->
+      <!-- Forecast -->
+      <div class="row">
+        <div class="col dayOne" <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Fri</h5>
+            <h6 class="card-subtitle mb-2 text-muted">⛅</h6>
+            <p class="card-text">54°</p>
+            <!--<a href="#" class="card-link">Card link</a> -->
+            <!-- <a href="#" class="card-link">Another link</a> -->
+          </div>
+        </div>
+        <!-- end of Forecast card -->
+
+        <div class="col dayTwo" <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Sat</h5>
+            <h6 class="card-subtitle mb-2 text-muted">⛅</h6>
+            <p class="card-text">52°</p>
+            <!--<a href="#" class="card-link">Card link</a>-->
+            <!--  <a href="#" class="card-link">Another link</a>-->
+          </div>
+        </div>
+        <!-- end of Forecast card -->
+
+        <div class="col dayThree" <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Sun</h5>
+            <h6 class="card-subtitle mb-2 text-muted">⛅</h6>
+            <p class="card-text">51°</p>
+            <!--<a href="#" class="card-link">Card link</a>-->
+            <!--<a href="#" class="card-link">Another link</a>-->
+          </div>
+        </div>
+        <!-- end of Forecast card -->
+
+        <div class="col dayFour" <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Mon</h5>
+            <h6 class="card-subtitle mb-2 text-muted">⛅</h6>
+            <p class="card-text">52°</p>
+            <!--<a href="#" class="card-link">Another link</a>-->
+            <!--<a href="#" class="card-link">Card link</a>-->
+          </div>
+        </div>
+        <!-- end of Forecast card -->
+
+        <div class="col dayFive" <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Tue</h5>
+            <h6 class="card-subtitle mb-2 text-muted">☁</h6>
+            <p class="card-text">58°</p>
+            <!--<a href="#" class="card-link">Another link</a>-->
+            <!--<a href="#" class="card-link">Card link</a>-->
+          </div>
+        </div>
+        <!-- end of Forecast card -->
+        <div class="row">
+          <div class="col-12 dayExtra" <div class="card"></div>
+        </div>
+        <!-- end of extra row div -->
+      </div>
+      <!-- forecast row div -->
+    </div>
+    <!-- container div -->
+    <script src="src/index.js"></script>
+  </body>
+</html>
