@@ -49,6 +49,5 @@ div.card-body:focus {
   margin-top: 20px;
 }
 footer {
-  display: block;
-  margin: 0px auto;
+  text-align: center;
 }
