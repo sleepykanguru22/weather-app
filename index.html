@@ -2,118 +2,76 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="style.css" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-
-    <title>🌪 Weather App</title>
+    <link rel="stylesheet" href="src/style.css" />
+    <title>Weather App</title>
   </head>
 
   <body>
     <div class="container">
-      <!-- search results -->
-      <section class="results">
+      <div class="weather-app">
+        <form class="search-form" id="search-form">
+          <div class="row">
+            <div class="col-6">
+              <input
+                type="search"
+                placeholder="Type a city.."
+                autofocus="on"
+                autocomplete="off"
+                id="city-input"
+                class="form-control shadow-sm"
+              />
+            </div>
+            <div class="col-3">
+              <input
+                type="submit"
+                value="Search"
+                class="form-control btn btn-primary shadow-sm w-100"
+              />
+            </div>
+          </div>
+        </form>
+        <h1 id="city"></h1>
+        <ul>
+          <li id="date"></li>
+          <li id="description"></li>
+        </ul>
         <div class="row">
-          <div class="col-12 cityName">
-            <h1 class="cityName" id="city-name">Current City</h1>
+          <div class="col-6">
+            <div class="clearfix">
+              <img src="" alt="" class="float-left" id="icon" />
+              <div class="float-left">
+                <span class="temperature" id="temperature"></span>
+                <span class="units">
+                  <a href="#" id="celcius-link" class="active">ºC</a>
+                  | <a href="#" id="farenheit-link">ºF</a>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <ul>
+              <li>Humidity: <span id="humidity"></span>%</li>
+              <li>Wind: <span id="wind"></span> km/h</li>
+            </ul>
           </div>
         </div>
-        <div class="row">
-          <div class="col-12"><h1 class="degrees">0°</h1></div>
-        </div>
-        <div class="row">
-          <div class="col-12">
-            <h1 class="currentTemp"><small>Current Temp</small></h1>
-            <div id="time">Time and Date</div>
-          </div>
-        </div>
-      </section>
-      <!-- end of search results -->
-      <!-- Form -->
-      <form class="searchBar">
-        <input
-          type="search"
-          class="search"
-          placeholder=" Search"
-          autocomplete="on"
-        />
-      </form>
-      <!-- end of form -->
-      <!-- Forecast -->
-      <div class="row">
-        <div class="col dayOne" <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Fri</h5>
-            <h6 class="card-subtitle mb-2 text-muted">⛅</h6>
-            <p class="card-text">54°</p>
-            <!--<a href="#" class="card-link">Card link</a> -->
-            <!-- <a href="#" class="card-link">Another link</a> -->
-          </div>
-        </div>
-        <!-- end of Forecast card -->
-
-        <div class="col dayTwo" <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Sat</h5>
-            <h6 class="card-subtitle mb-2 text-muted">⛅</h6>
-            <p class="card-text">52°</p>
-            <!--<a href="#" class="card-link">Card link</a>-->
-            <!--  <a href="#" class="card-link">Another link</a>-->
-          </div>
-        </div>
-        <!-- end of Forecast card -->
-
-        <div class="col dayThree" <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Sun</h5>
-            <h6 class="card-subtitle mb-2 text-muted">⛅</h6>
-            <p class="card-text">51°</p>
-            <!--<a href="#" class="card-link">Card link</a>-->
-            <!--<a href="#" class="card-link">Another link</a>-->
-          </div>
-        </div>
-        <!-- end of Forecast card -->
-
-        <div class="col dayFour" <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Mon</h5>
-            <h6 class="card-subtitle mb-2 text-muted">⛅</h6>
-            <p class="card-text">52°</p>
-            <!--<a href="#" class="card-link">Another link</a>-->
-            <!--<a href="#" class="card-link">Card link</a>-->
-          </div>
-        </div>
-        <!-- end of Forecast card -->
-
-        <div class="col dayFive" <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Tue</h5>
-            <h6 class="card-subtitle mb-2 text-muted">☁</h6>
-            <p class="card-text">58°</p>
-            <!--<a href="#" class="card-link">Another link</a>-->
-            <!--<a href="#" class="card-link">Card link</a>-->
-          </div>
-        </div>
-        <!-- end of Forecast card -->
-        <div class="row">
-          <div class="col-12 dayExtra" <div class="card"></div>
-        </div>
-        <!-- end of extra row div -->
       </div>
-      <!-- forecast row div -->
-      <footer>
-        <a href="github.com/sleepykanguru22/weather-app">Open source</a> By
-        Jasmin Carter
-      </footer>
+      <small class="signature">
+        <a <a href="github.com/sleepykanguru22/weather-app" target="_blank"
+          >Open-source code</a
+        >
+        By Jasmin Carter
+      </small>
     </div>
-    <!-- container div -->
-    <script src="index.js"></script>
+    <script src="src/index.js"></script>
   </body>
 </html>
